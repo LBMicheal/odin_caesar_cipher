@@ -1,5 +1,5 @@
 string = "By the way"
-shift = 3
+shift = 5
 
 char_array = string.split("")
 int_array = []
@@ -12,7 +12,6 @@ end
 def convert_to_cipher (integer, shift)
   temp = 0
   unless integer == 33
-    p integer
     case integer
     when 65..90
       integer += shift
@@ -27,7 +26,7 @@ def convert_to_cipher (integer, shift)
         integer = 96 + temp
       end
     end
-    p integer
+    return integer
   end
 end
 
@@ -40,6 +39,4 @@ int_array.each do |int|
 end
 
 p string
-p char_array
-p int_array
 p cypher_array.join
